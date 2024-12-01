@@ -38,24 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvMessage"
-        android:id="@+id/RegisterNameLayout"
-        android:layout_marginTop="@dimen/_100dp"
-        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/RegisterName"
-            android:id="@+id/RegisterName"
-            android:background="@color/inputFieldColor" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/RegisterNameLayout"
         android:id="@+id/RegisterEmailLayout"
-        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:layout_marginTop="@dimen/_100dp"
         android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
         >
         <com.google.android.material.textfield.TextInputEditText
@@ -73,6 +57,7 @@
         android:id="@+id/RegisterPasswordLayout"
         android:layout_marginTop="@dimen/InputFieldTopMargin"
         android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        app:passwordToggleEnabled="true"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -80,6 +65,7 @@
             android:hint="@string/PasswordInputFieldText"
             android:id="@+id/RegisterPassword"
             android:background="@color/inputFieldColor"
+            android:inputType="textPassword"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,6 +76,7 @@
         android:id="@+id/RegisterConfirmPasswordLayout"
         android:layout_marginTop="@dimen/InputFieldTopMargin"
         android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        app:passwordToggleEnabled="true"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -97,6 +84,7 @@
             android:hint="@string/confirm_password"
             android:id="@+id/RegisterConfirmPassword"
             android:background="@color/inputFieldColor"
+            android:inputType="textPassword"
             />
     </com.google.android.material.textfield.TextInputLayout>
 

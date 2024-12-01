@@ -57,6 +57,7 @@
         android:id="@+id/loginPasswordLayout"
         android:layout_marginTop="@dimen/InputFieldTopMargin"
         android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        app:passwordToggleEnabled="true"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -64,6 +65,7 @@
             android:hint="@string/PasswordInputFieldText"
             android:id="@+id/LoginPassword"
             android:background="@color/inputFieldColor"
+            android:inputType="textPassword"
         />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,6 +80,7 @@
         android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
         android:id="@+id/btnLogin"
     />
+
 
     <TextView
         android:layout_width="wrap_content"
