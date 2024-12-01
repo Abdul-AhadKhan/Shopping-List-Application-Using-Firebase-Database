@@ -74,11 +74,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/btnLoginColor"
-        android:text="ADD"
+        android:text="@string/add"
         app:layout_constraintTop_toBottomOf="@id/tilProductQuantity"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="@dimen/FieldsHorizontalMargin"
         android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:id="@+id/btnAddProduct"
+        android:layout_marginBottom="@dimen/InputFieldTopMargin"
     />
 
 
