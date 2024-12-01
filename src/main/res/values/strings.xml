@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Shopping List</string>
+    <string name="LoginHeading">Welcome Back</string>
+    <string name="LoginMessage">Enter Your Credentials For Login</string>
+    <string name="EmailInputFieldText">Email</string>
+    <string name="PasswordInputFieldText">Password</string>
+    <string name="LoginButtonText">LOGIN</string>
+    <string name="NoAccountMessage">Don\'t Have An Account ?</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="RegisterMessage">Create Your Account</string>
+    <string name="RegisterName">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="HaveAccountMessage">Already Have An Account ?</string>
+    <string name="tvLogin">Login</string>
 </resources>

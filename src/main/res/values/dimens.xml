@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="MainHeadingTopMargin">60dp</dimen>
+    <dimen name="MainHeadingTextSize">40sp</dimen>
+    <dimen name="MessageTextSize">15sp</dimen>
+    <dimen name="MessageMarginTop">10dp</dimen>
+    <dimen name="FieldsHorizontalMargin">30dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
+    <dimen name="InputFieldTopMargin">20dp</dimen>
+    <dimen name="ButtonTopMargin">30dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+</resources>

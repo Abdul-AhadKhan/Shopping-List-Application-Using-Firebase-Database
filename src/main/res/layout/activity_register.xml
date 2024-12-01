@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SignUp"
+        android:textStyle="bold"
+        android:textSize="@dimen/MainHeadingTextSize"
+        android:id="@+id/tvWelcomeBack"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/MainHeadingTopMargin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RegisterMessage"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack"
+        android:id="@+id/tvMessage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/MessageTextSize"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/MessageMarginTop"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage"
+        android:id="@+id/RegisterNameLayout"
+        android:layout_marginTop="@dimen/_100dp"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/RegisterName"
+            android:id="@+id/RegisterName"
+            android:background="@color/inputFieldColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/RegisterNameLayout"
+        android:id="@+id/RegisterEmailLayout"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/EmailInputFieldText"
+            android:id="@+id/RegisterEmail"
+            android:background="@color/inputFieldColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/RegisterEmailLayout"
+        android:id="@+id/RegisterPasswordLayout"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/PasswordInputFieldText"
+            android:id="@+id/RegisterPassword"
+            android:background="@color/inputFieldColor"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/RegisterPasswordLayout"
+        android:id="@+id/RegisterConfirmPasswordLayout"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/confirm_password"
+            android:id="@+id/RegisterConfirmPassword"
+            android:background="@color/inputFieldColor"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btnLoginColor"
+        android:textColor="@color/white"
+        android:text="@string/SignUp"
+        app:layout_constraintTop_toBottomOf="@id/RegisterConfirmPasswordLayout"
+        android:layout_marginTop="@dimen/ButtonTopMargin"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        android:id="@+id/btnSignUp"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HaveAccountMessage"
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="@dimen/_100dp"
+        android:id="@+id/tvHaveAccountMessage"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toRightOf="@id/tvHaveAccountMessage"
+        android:layout_marginStart="@dimen/_5dp"
+        android:id="@+id/tvLogin"
+        android:textColor="@color/btnLoginColor"
+        android:textStyle="bold"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
