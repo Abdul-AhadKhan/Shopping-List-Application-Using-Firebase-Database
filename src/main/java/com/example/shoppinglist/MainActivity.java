@@ -3,6 +3,9 @@ package com.example.shoppinglist;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    ImageView ivLogo;
+    Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ivLogo = findViewById(R.id.ivLogo);
+        animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.logo_animation);
+        ivLogo.setAnimation(animation);
+
 
         new Handler().postDelayed(new Runnable() {
             @Override

@@ -2,41 +2,41 @@ package com.example.shoppinglist;
 
 public class Product {
 
-    private String name;
-    private String price;
-    private String quantity;
+    private String Name;
+    private int Price;
+    private int Quantity;
 
     public Product(){
 
     }
 
-    public Product(String name, String price, String quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+    public Product(String name, int price, int quantity) {
+        this.Name = name;
+        this.Price = price;
+        this.Quantity = quantity;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
-    public String getPrice() {
-        return price;
+    public int getPrice() {
+        return Price;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setPrice(int price) {
+        this.Price = price;
     }
 
-    public String getQuantity() {
-        return quantity;
+    public int getQuantity() {
+        return Quantity;
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
+    public void setQuantity(int quantity) {
+        this.Quantity = quantity;
     }
 }

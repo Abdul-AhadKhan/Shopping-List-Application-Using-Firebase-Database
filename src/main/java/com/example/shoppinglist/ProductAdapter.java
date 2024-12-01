@@ -37,7 +37,7 @@ public class ProductAdapter extends FirebaseRecyclerAdapter<Product, ProductAdap
 
     @SuppressLint("SetTextI18n")
     @Override
-    protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Product model) {
+    protected void onBindViewHolder(@NonNull ProductViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Product model) {
         holder.tvProductName.setText(model.getName());
         holder.tvProductPrice.setText("PKR " + model.getPrice());
         holder.tvProductQuantity.setText("# " + model.getQuantity());
@@ -72,6 +72,7 @@ public class ProductAdapter extends FirebaseRecyclerAdapter<Product, ProductAdap
 
                     }
                 });
+                dialog.show();
             }
         });
 

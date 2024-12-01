@@ -36,6 +36,7 @@ public class Dashboard extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     String uId;
+    ProductAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,9 @@ public class Dashboard extends AppCompatActivity {
                 .setQuery(query, Product.class)
                 .build();
 
-        ProductAdapter adapter = new ProductAdapter(options, Dashboard.this);
+        adapter = new ProductAdapter(options, Dashboard.this);
         rvProducts.setAdapter(adapter);
+        rvProducts.setHasFixedSize(true);
 
         fabAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +81,7 @@ public class Dashboard extends AppCompatActivity {
     }
 
     private void addProduct(){
+
         AlertDialog.Builder dialog = new AlertDialog.Builder(Dashboard.this);
         View v = LayoutInflater.from(Dashboard.this).inflate(R.layout.add_product_layout, null, false);
         dialog.setView(v);
@@ -127,5 +130,18 @@ public class Dashboard extends AppCompatActivity {
             }
         });
         dialog.show();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
     }
 }
