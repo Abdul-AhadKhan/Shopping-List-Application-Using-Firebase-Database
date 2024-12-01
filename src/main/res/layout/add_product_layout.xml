@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:text="ADD PRODUCT"
+        android:textSize="@dimen/MessageTextSize"
+        android:textStyle="bold"
+        android:id="@+id/tvAddProduct"
+    />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvAddProduct"
+        android:id="@+id/tilProductName"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/product_name"
+            android:id="@+id/tietProductName"
+            android:background="@color/inputFieldColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilProductName"
+        android:id="@+id/tilProductPrice"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/product_price"
+            android:id="@+id/tietProductPrice"
+            android:background="@color/inputFieldColor"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilProductPrice"
+        android:id="@+id/tilProductQuantity"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+        android:layout_marginHorizontal="@dimen/FieldsHorizontalMargin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/product_quantity"
+            android:id="@+id/tietProductQuantity"
+            android:background="@color/inputFieldColor"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btnLoginColor"
+        android:text="ADD"
+        app:layout_constraintTop_toBottomOf="@id/tilProductQuantity"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="@dimen/FieldsHorizontalMargin"
+        android:layout_marginTop="@dimen/InputFieldTopMargin"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

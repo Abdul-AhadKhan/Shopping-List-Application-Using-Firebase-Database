@@ -12,4 +12,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="HaveAccountMessage">Already Have An Account ?</string>
     <string name="tvLogin">Login</string>
+    <string name="product_quantity">Product Quantity</string>
+    <string name="product_price">Product Price</string>
+    <string name="product_name">Product Name</string>
 </resources>
